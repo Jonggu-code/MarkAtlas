@@ -62,8 +62,8 @@ function App() {
   if (isError) return <ErrorMessage />;
 
   return (
-    <div className="flex justify-center p-4 text-neutral-800 bg-slate-900">
-      <div className="w-full max-w-5xl p-4 bg-blue-400/60 rounded-xl">
+    <div className="flex min-h-dvh justify-center p-4 text-neutral-800 bg-slate-900">
+      <div className="w-full h-max max-w-5xl p-4 bg-blue-400/60 rounded-xl">
         <SearchForm
           filters={filters}
           country={country}
