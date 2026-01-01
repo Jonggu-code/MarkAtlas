@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="public/Tech Company/logobox.png">
+  <img src="public/logobox.png">
 </p>
 
 # MarkAtlas (마크아틀라스) - Global Trademark Explorer
