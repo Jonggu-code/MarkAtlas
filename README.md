@@ -8,13 +8,6 @@ MSW 기반으로 서버 상황을 사전에 검증하며, 실제 서비스 연�
 
 (Vercel 배포 후 주소 추가)
 
-- React
-- Tailwind CSS (v4)
-- React Query
-- Axios
-- MSW (Mock Service Worker)
-- Vite
-
 ## 🎯 프로젝트 목적과 의도
 
 1. 다국가 API 데이터 스키마를 공통 포맷으로 통합하는 설계 경험
