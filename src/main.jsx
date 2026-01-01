@@ -6,26 +6,30 @@ import "./index.css";
 import { FavoritesProvider } from "./contexts/FavoritesContext.jsx";
 import { AlertProvider } from "./contexts/AlertContext.jsx";
 
-const enableMocking =
-  import.meta.env.DEV || import.meta.env.VITE_ENABLE_MSW === "true";
+async function prepareApp() {
+  const enableMocking =
+    import.meta.env.DEV || import.meta.env.VITE_ENABLE_MSW === "true";
 
-if (enableMocking) {
-  const { worker } = await import("./mocks/browser");
-  worker.start({
-    onUnhandledRequest: "bypass",
-  });
+  if (enableMocking) {
+    const { worker } = await import("./mocks/browser");
+    await worker.start({
+      onUnhandledRequest: "bypass",
+    });
+  }
+
+  const queryClient = new QueryClient();
+
+  createRoot(document.getElementById("root")).render(
+    <StrictMode>
+      <QueryClientProvider client={queryClient}>
+        <AlertProvider>
+          <FavoritesProvider>
+            <App />
+          </FavoritesProvider>
+        </AlertProvider>
+      </QueryClientProvider>
+    </StrictMode>,
+  );
 }
 
-const queryClient = new QueryClient();
-
-createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <QueryClientProvider client={queryClient}>
-      <AlertProvider>
-        <FavoritesProvider>
-          <App />
-        </FavoritesProvider>
-      </AlertProvider>
-    </QueryClientProvider>
-  </StrictMode>,
-);
+prepareApp();
