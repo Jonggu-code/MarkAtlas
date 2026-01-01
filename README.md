@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="public/Tech Company/logobox.png">
+</p>
+
 # MarkAtlas (마크아틀라스) - Global Trademark Explorer
 
 React 기반에서 다국가 상표 데이터 통합 / 검색 UX / 확장 가능한 아키텍처 설계를
