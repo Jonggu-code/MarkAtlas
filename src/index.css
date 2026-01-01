@@ -1,0 +1,80 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans:
+      "Pretendard", ui-sans-serif, system-ui, sans-serif;
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+.react-datepicker__day {
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+}
+
+.react-datepicker__day:hover {
+  background-color: #f3f4f6;
+}
+
+.react-datepicker__day--selected {
+  background-color: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+.react-datepicker__day--today {
+  border-color: #0d02a3;
+}
+
+.react-datepicker__day--outside-month {
+  opacity: 0;
+}
+
+@keyframes dots {
+  0% {
+    content: "";
+  }
+  33% {
+    content: ".";
+  }
+  66% {
+    content: "..";
+  }
+  100% {
+    content: "...";
+  }
+}
+
+.animate-dots::after {
+  content: "";
+  animation: dots 2s steps(3, end) infinite;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  66% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1.5s ease-out;
+}
