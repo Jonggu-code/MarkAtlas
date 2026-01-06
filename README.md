@@ -10,7 +10,7 @@ MSW 기반으로 서버 상황을 사전에 검증하며, 실제 서비스 연�
 
 ## 🌐 배포 주소
 
-(Vercel 배포 후 주소 추가)
+<a href="https://mark-atlas.vercel.app/" target="_blank">Mark-Atlas 배포 주소</a>
 
 ## 🎯 프로젝트 목적과 의도
 
